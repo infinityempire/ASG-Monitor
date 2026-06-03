@@ -1,0 +1,20 @@
+{
+  "targets": [
+    {
+      "name": "Delta Agent",
+      "urlEnv": "DELTA_HEALTH_URL"
+    },
+    {
+      "name": "Social API Hub",
+      "urlEnv": "SOCIAL_API_HUB_HEALTH_URL"
+    },
+    {
+      "name": "Lottery Bot",
+      "urlEnv": "LOTTERY_BOT_HEALTH_URL"
+    },
+    {
+      "name": "Tal HaTil Website",
+      "urlEnv": "TALHATIL_URL"
+    }
+  ]
+}
