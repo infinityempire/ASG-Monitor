@@ -1,10 +1,38 @@
 {
   "name": "asg-monitor",
   "version": "1.0.0",
+  "description": "AWS Auto Scaling Group Monitor - Real-time health and capacity monitoring",
   "private": true,
   "type": "module",
+  "main": "monitor.js",
   "scripts": {
-    "check": "node monitor.js",
-    "test": "node -e \"JSON.parse(require('fs').readFileSync('monitor.config.json','utf8')); console.log('config ok')\""
-  }
+    "start": "node monitor.js",
+    "check": "node monitor.js --once",
+    "test": "node -e \"JSON.parse(require('fs').readFileSync('monitor.config.json','utf8')); console.log('✓ Config validation passed')\"",
+    "generate-config": "node -e \"import('./monitor.js').then(m => { const monitor = new m.default('./monitor.config.json'); monitor.createDefaultConfig(); });\""
+  },
+  "keywords": [
+    "aws",
+    "asg",
+    "auto-scaling",
+    "monitoring",
+    "health-check",
+    "cloudwatch",
+    "metrics"
+  ],
+  "author": "Infinity Empire",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infinityempire/ASG-Monitor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/infinityempire/ASG-Monitor/issues"
+  },
+  "homepage": "https://github.com/infinityempire/ASG-Monitor#readme"
 }
