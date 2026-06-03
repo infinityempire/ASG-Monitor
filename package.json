@@ -1,0 +1,10 @@
+{
+  "name": "asg-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node monitor.js",
+    "test": "node -e \"JSON.parse(require('fs').readFileSync('monitor.config.json','utf8')); console.log('config ok')\""
+  }
+}
